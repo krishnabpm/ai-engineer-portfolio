@@ -14,8 +14,22 @@ cd LangChain-OpenRouter-Chatbot
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env   # then add your OPENROUTER_API_KEY
 ```
+
+### Add your own API key
+This repo does **not** include an API key. You must provide your own:
+
+1. Get a free key at https://openrouter.ai/keys.
+2. Copy the template and rename it to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
+3. Open `.env` and replace the placeholder with your own key:
+   ```
+   OPENROUTER_API_KEY=your-openrouter-api-key-here
+   ```
+
+`.env` is git-ignored, so your key is never committed. Never put a real key in `.env.example`.
 
 ## Run
 ```bash
