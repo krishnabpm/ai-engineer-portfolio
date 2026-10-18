@@ -1,0 +1,6 @@
+# LangChain (ChatOpenAI client, works with OpenRouter's OpenAI-compatible API)
+langchain-openai
+langchain-core
+
+# Environment variables
+python-dotenv
