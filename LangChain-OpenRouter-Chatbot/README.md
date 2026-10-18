@@ -36,3 +36,13 @@ This repo does **not** include an API key. You must provide your own:
 python 1.ChatModels/openrouter_streaming_chatbot.py
 ```
 Type `exit` to quit.
+
+## Tests
+The tests use a fake model, so they need no network and no API key.
+
+```bash
+pip install -r requirements-dev.txt
+pytest
+```
+
+They cover the model settings (base URL, timeout, retries, fallback models), streaming (joining chunks, skipping empty ones), conversation memory, the `exit` command, and error handling (the failed message is dropped and the chat continues).
